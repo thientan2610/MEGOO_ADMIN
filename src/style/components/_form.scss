@@ -1,0 +1,27 @@
+.form-control {
+  border-color: $gray-600;
+}
+.form-select {
+  border: solid 1px $gray-600;
+  width: fit-content;
+  &.group-select {
+    option {
+      width: fit-content;
+      background-color: $white;
+    }
+    &.super-user {
+      background-color: rgba(245, 143, 0, 0.2) !important;
+      color: $primary;
+    }
+    &.user {
+      background-color: rgba(0, 110, 95, 0.2) !important;
+      color: $quaternary;
+    }
+  }
+
+  // &.table-filter {
+  //   @include media-breakpoint-down(sm) {
+  //     display: none;
+  //   }
+  // }
+}

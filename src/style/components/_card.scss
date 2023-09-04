@@ -1,0 +1,59 @@
+/**
+ * = Cards
+ */
+
+.card {
+  position: relative;
+  .card-header {
+    background: transparent;
+  }
+
+  &.hover-state {
+    &:hover {
+      background-color: $gray-200;
+    }
+  }
+
+  .profile-cover {
+    @include background-image(no-repeat, cover);
+    height: 150px;
+  }
+
+  @include media-breakpoint-up(lg) {
+    &.timeline-card {
+      &:before {
+        content: "";
+        position: absolute;
+        top: 50%;
+        left: 0;
+        margin-left: 0.75rem;
+        border: 8px solid $black;
+        border-color: transparent #e0e6ec #e0e6ec transparent;
+        -webkit-box-sizing: border-box;
+        box-sizing: border-box;
+        -webkit-transform-origin: 0 0;
+        transform-origin: 0 0;
+        @include transform(rotate(135deg));
+        @include box-shadow($box-shadow);
+      }
+    }
+
+    &.left-timeline-card {
+      &:after {
+        content: "";
+        position: absolute;
+        top: 50%;
+        right: 0;
+        margin-right: -5px;
+        border: 8px solid $black;
+        border-color: transparent #e0e6ec #e0e6ec transparent;
+        -webkit-box-sizing: border-box;
+        box-sizing: border-box;
+        -webkit-transform-origin: 0 0;
+        transform-origin: 0 0;
+        @include transform(rotate(-45deg));
+        @include box-shadow($box-shadow);
+      }
+    }
+  }
+}

@@ -1,0 +1,77 @@
+.input-group {
+  border-radius: 0.5rem;
+  transition: all 0.2s ease;
+  &.table-search {
+    width: 250px;
+    @include media-breakpoint-down(md) {
+      width: 100%;
+    }
+  }
+  .form-control {
+    box-shadow: none;
+    border-color: $gray-600;
+    &:not(:first-child) {
+      border-left: 0;
+      padding-left: 2;
+      border-color: $gray-600;
+    }
+    &:focus {
+      box-shadow: none;
+      border-color: $gray-600;
+    }
+  }
+  .input-button-group {
+    border-right: 0;
+    padding-right: 0;
+  }
+  .input-out-button-group {
+    border-top-right-radius: 0.5rem !important;
+    border-bottom-right-radius: 0.5rem !important;
+  }
+  .btn {
+    border-color: $gray-600;
+    border-left: 0;
+    color: $gray-700;
+    background-color: $white;
+    border-top-right-radius: 0.5rem !important;
+    border-bottom-right-radius: 0.5rem !important;
+    &:hover {
+      border-color: $gray-600;
+      background: none;
+    }
+  }
+  .label-checkbox {
+    margin-left: -1px;
+    border: 1px solid $gray-600;
+    border-left: 0;
+    border-top-right-radius: 0.5rem !important;
+    border-bottom-right-radius: 0.5rem !important;
+    color: $dark;
+    background-color: $gray-200;
+  }
+  .form-check-input {
+    border: 1px solid $gray-600 !important;
+  }
+}
+.card-link {
+  color: $black;
+}
+.input-group-text {
+  color: $gray-700;
+  border-color: $gray-600;
+  font-size: $font-size-sm;
+  transition: border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
+  border-right: 0;
+}
+.input-group-prepend {
+  margin-right: -2px;
+}
+.focused {
+  .input-group-text {
+    color: $gray-700;
+    background-color: white;
+  }
+  .input-group-shadow {
+    box-shadow: 0.1rem 0.1rem 0 rgba(245, 248, 251, 0.5);
+  }
+}

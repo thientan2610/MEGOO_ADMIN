@@ -1,0 +1,9 @@
+.dropdown {
+  .dropdown-toggle {
+    &.dropdown-table-option {
+      background-color: inherit;
+      border-style: none;
+      height: 2rem;
+    }
+  }
+}

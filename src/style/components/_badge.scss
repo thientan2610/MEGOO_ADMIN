@@ -1,0 +1,23 @@
+.badge {
+  &.bg-primary {
+    background-color: $primary;
+    color: $white;
+  }
+  &.tag {
+    &.bg-primary {
+      background-color: rgba(245, 143, 0, 0.2) !important;
+      color: $primary;
+      border: solid $primary 0.5px;
+    }
+    &.bg-quaternary {
+      background-color: rgba(0, 110, 95, 0.2) !important;
+      color: $quaternary;
+      border: solid $quaternary 0.5px;
+    }
+    &.bg-danger {
+      background-color: rgba(211, 0, 63, 0.2) !important;
+      color: $danger;
+      border: solid $danger 0.5px;
+    }
+  }
+}

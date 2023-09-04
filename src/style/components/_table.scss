@@ -1,0 +1,97 @@
+.table {
+  width: 96%;
+  td {
+    border-bottom: solid 1px $gray-500;
+  }
+  &.datatable {
+    th:nth-child(2) {
+      display: none;
+    }
+    td:nth-child(2) {
+      display: none;
+    }
+    &.package-management {
+      th {
+        &:nth-child(4),
+        &:nth-child(6) {
+          text-align: end;
+        }
+        &:nth-child(5) {
+          text-align: center;
+        }
+      }
+      td {
+        &:nth-child(4),
+        &:nth-child(6) {
+          text-align: end;
+        }
+        &:nth-child(5) {
+          text-align: center;
+        }
+      }
+    }
+    &.group-management {
+      th {
+        &:nth-child(5) {
+          text-align: center;
+        }
+        &:nth-child(4) {
+          width: 25%;
+        }
+      }
+      td {
+        &:nth-child(5) {
+          text-align: center;
+        }
+        &:nth-child(4) {
+          width: 25%;
+        }
+      }
+    }
+  }
+  &.receipt {
+    td,
+    th {
+      text-align: center;
+      &:nth-child(1),
+      &:nth-child(3) {
+        text-align: start;
+      }
+    }
+    th:nth-child(5),
+    td:nth-child(5) {
+      text-align: end;
+      padding-right: 0.8rem;
+    }
+  }
+  .thead-light {
+    border-style: none;
+    th {
+      background-color: $gray-300;
+      color: $dark;
+      &:first-child {
+        border-top-left-radius: $border-radius-lg;
+        border-bottom-left-radius: $border-radius-lg;
+      }
+      &:last-child {
+        border-top-right-radius: $border-radius-lg;
+        border-bottom-right-radius: $border-radius-lg;
+      }
+    }
+  }
+  tfoot {
+    th {
+      border-top: solid 1.4px $gray-500 !important;
+    }
+  }
+}
+.table-checkbox {
+  .form-check-input {
+    border: 1px solid $gray-500 !important;
+  }
+}
+hr {
+  &.dash {
+    border-top: 1px dashed $dark;
+  }
+}

@@ -1,0 +1,95 @@
+/*
+* = Buttons
+*/
+
+.btn {
+  transition: $transition-transform;
+  &.btn-table-options {
+    border-style: none;
+    background-color: initial;
+    font-size: larger;
+    color: $black;
+    margin-right: 1rem;
+    padding: 0.3rem 0 0.3rem;
+    &:hover {
+      background-color: initial;
+      color: $primary;
+    }
+    &:active,
+    &:focus {
+      color: $primary;
+    }
+    &.btn-slider {
+      margin: 0;
+      padding: 0;
+    }
+  }
+  &.btn-circle {
+    border-radius: 50%;
+  }
+
+  &.btn-md {
+    padding: 0.65rem 1.25rem;
+  }
+
+  &.btn-xs {
+    padding: 0.175rem 0.45rem;
+    font-size: 0.7rem;
+  }
+  &.btn-primary {
+    @include button-variant(
+      $primary,
+      $primary,
+      $white,
+      lighten($primary, 5%),
+      lighten($primary, 5%),
+      $white,
+      $primary,
+      $primary,
+      $white,
+      darken($primary, 5%),
+      darken($primary, 5%),
+      $white
+    );
+  }
+  &.btn-outline-primary {
+    @include button-outline-variant(
+      $primary,
+      $white,
+      $primary,
+      $primary,
+      $white
+    );
+  }
+  &.btn-login {
+    @include button-variant(
+      $primary,
+      $primary,
+      $white,
+      $soft-green,
+      $soft-green,
+      $white,
+      $soft-green,
+      $soft-green,
+      $white,
+      darken($primary, 5%),
+      darken($primary, 5%),
+      $white
+    );
+    transition: $transition-transform;
+    &:active {
+      transform: scale(0.9);
+    }
+  }
+  &.btn-pressed {
+    box-shadow: 0 3px 1px $gray-500;
+    &:active {
+      transform: translateY(3px);
+      box-shadow: 0 0 1px $gray-500;
+    }
+  }
+  &.btn-qty {
+    background-color: rgba(76, 86, 128, 0.2);
+    border-style: none;
+  }
+}
